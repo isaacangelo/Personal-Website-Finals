@@ -1,0 +1,201 @@
+.goals-container {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.goals-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.category-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(77, 166, 255, 0.3);
+}
+
+.category-btn.active {
+  background: rgba(77, 166, 255, 0.5);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.goals-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.goal-card {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.goal-header h2 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.timeline {
+  background: rgba(77, 166, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgba(77, 166, 255, 0.5);
+  border-radius: 5px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: -20px;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.milestones {
+  margin-top: 2rem;
+}
+
+.milestones h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.milestones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.milestones li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.milestone-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.milestones li.completed {
+  color: var(--secondary-color);
+}
+
+.milestones li.completed .milestone-check {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.goals-quote {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add text protection */
+.goal-header h2,
+.milestones h3,
+.goals-quote blockquote {
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.milestones li,
+.goals-quote footer {
+  color: var(--white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.goals-quote blockquote {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.goals-quote footer {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .goals-nav {
+    flex-wrap: wrap;
+  }
+
+  .category-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .goal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .timeline {
+    align-self: flex-start;
+  }
+}

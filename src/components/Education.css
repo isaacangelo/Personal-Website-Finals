@@ -1,0 +1,224 @@
+.education-container {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: rgba(77, 166, 255, 0.3);
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  transform: translateX(2rem);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+  transform: translateX(-2rem);
+}
+
+.timeline-content {
+  width: calc(50% - 2rem);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  top: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -3rem;
+  transform: translate(50%, -50%);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -3rem;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timeline-header h2 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.year {
+  background: rgba(77, 166, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.achievements h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.certifications {
+  max-width: 1000px;
+  margin: 4rem auto;
+}
+
+.certifications h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.cert-card {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.cert-year {
+  display: inline-block;
+  background: rgba(77, 166, 255, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Add text protection */
+.timeline-header h2,
+.timeline-content h3,
+.timeline-content h4,
+.achievements h5,
+.cert-card h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--white);
+}
+
+.description,
+.achievements li,
+.cert-card p {
+  color: var(--white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    width: calc(100% - 3rem);
+    margin-left: 3rem;
+    transform: none;
+  }
+
+  .timeline-content::before {
+    left: -3rem !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
