@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import './Gallery.css'
+import photogallery1 from '../PhotoGalleryImages/Photogallery1.webp'
+import photogallery2 from '../PhotoGalleryImages/photogallery2.webp'
+import photogallery3 from '../PhotoGalleryImages/photogallery3.webp'
+import photogallery4 from '../PhotoGalleryImages/photogallery4.webp'
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -7,25 +11,25 @@ function Gallery() {
   const images = [
     {
       id: 1,
-      src: "/src/PhotoGalleryImages/Photogallery1.webp",
+      src: photogallery1,
       title: "Photo 1",
       category: "Gallery"
     },
     {
       id: 2,
-      src: "/src/PhotoGalleryImages/photogallery2.webp",
+      src: photogallery2,
       title: "Photo 2",
       category: "Gallery"
     },
     {
       id: 3,
-      src: "/src/PhotoGalleryImages/photogallery3.webp",
+      src: photogallery3,
       title: "Photo 3",
       category: "Gallery"
     },
     {
       id: 4,
-      src: "/src/PhotoGalleryImages/photogallery4.webp",
+      src: photogallery4,
       title: "Photo 4",
       category: "Gallery"
     }
