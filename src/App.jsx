@@ -13,6 +13,7 @@ import Feedback from './components/Feedback'
 import Music from './components/Music'
 import { MusicProvider } from './context/MusicContext'
 import './App.css'
+import backgroundVideo from './background/background3.gif'
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
       <div className="app">
         <img
           className="background-video"
-          src="/src/background/background3.gif"
+          src={backgroundVideo}
           alt="Background"
         />
         <Navbar />
